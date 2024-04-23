@@ -75,28 +75,28 @@ class RemoteFileDownloadWorkManager @AssistedInject constructor(
                 DownloadContentType.Video -> {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                         MediaStore.Video.Media.getContentUri(
-                            MediaStore.VOLUME_EXTERNAL_PRIMARY
+                            MediaStore.VOLUME_EXTERNAL_PRIMARY + "/Milktea"
                         )
                     } else {
-                        MediaStore.Video.Media.EXTERNAL_CONTENT_URI
+                        MediaStore.Video.Media.EXTERNAL_CONTENT_URI + "/Milktea"
                     }
                 }
                 DownloadContentType.Image -> {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                         MediaStore.Images.Media.getContentUri(
-                            MediaStore.VOLUME_EXTERNAL_PRIMARY
+                            MediaStore.VOLUME_EXTERNAL_PRIMARY + "/Milktea"
                         )
                     } else {
-                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI + "/Milktea"
                     }
                 }
                 DownloadContentType.Audio -> {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                         MediaStore.Audio.Media.getContentUri(
-                            MediaStore.VOLUME_EXTERNAL_PRIMARY
+                            MediaStore.VOLUME_EXTERNAL_PRIMARY + "/Milktea"
                         )
                     } else {
-                        MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
+                        MediaStore.Audio.Media.EXTERNAL_CONTENT_URI + "/Milktea"
                     }
                 }
             }
