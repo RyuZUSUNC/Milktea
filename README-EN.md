@@ -101,4 +101,4 @@ push_to_fcm.server_base_url=https://FooBarFooBar-pus
 push_to_fcm.public_key=public_key
 push_to_fcm.auth=auth_secret.txt
 ```
-And then, build Milktea on Android SDK or AndroidStudio.
+And then, build Milktea on Android SDK or AndroidStudio.1
