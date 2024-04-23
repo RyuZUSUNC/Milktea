@@ -105,7 +105,10 @@ class RemoteFileDownloadWorkManager @AssistedInject constructor(
             val contentDetail = ContentValues().apply {
                 when (type) {
                     DownloadContentType.Video -> put(MediaStore.Video.Media.DISPLAY_NAME, fileName)
-                    DownloadContentType.Image -> put(MediaStore.Images.Media.DISPLAY_NAME, "$fileName.png")
+                    DownloadContentType.Image -> {
+                        put(MediaStore.Images.Media.DISPLAY_NAME, "$fileName.png")
+                        put(MediaStore.Images.Media.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/Milktea")
+                    }
                     DownloadContentType.Audio -> put(MediaStore.Audio.Media.DISPLAY_NAME, fileName)
                 }
             }
